@@ -70,10 +70,10 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      --colorscheme = "catppuccin",
       --colorscheme = "gruvbox-material",
       --colorscheme = "modus",
-      --colorscheme = "oxocarbon",
+      colorscheme = "oxocarbon",
     },
   },
 }
