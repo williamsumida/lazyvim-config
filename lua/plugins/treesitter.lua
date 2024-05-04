@@ -14,10 +14,10 @@ return {
       "regex",
       "tsx",
       "typescript",
-      "astro",
       "vim",
-      "php",
       "yaml",
+      "astro",
+      "php",
     },
   },
 }
