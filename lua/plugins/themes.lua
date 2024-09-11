@@ -1,5 +1,4 @@
 return {
-  { "/sainnhe/gruvbox-material", enabled = true },
   { "miikanissi/modus-themes.nvim", enabled = true },
   { "nyoom-engineering/oxocarbon.nvim", enabled = true },
   {
@@ -70,10 +69,10 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      --colorscheme = "catppuccin",
+      colorscheme = "catppuccin",
       --colorscheme = "gruvbox-material",
       --colorscheme = "modus",
-      colorscheme = "oxocarbon",
+      --colorscheme = "oxocarbon",
     },
   },
 }
