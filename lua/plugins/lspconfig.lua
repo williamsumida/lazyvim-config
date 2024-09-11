@@ -63,6 +63,7 @@ return {
           -- end workaround
         end,
       },
+      inlay_hints = { enabled = false },
     },
   },
   {
@@ -78,6 +79,9 @@ return {
     dependencies = {
       { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
     },
+    keys = function()
+      return {}
+    end,
     opts = function(_, opts)
       local format_kinds = opts.formatting.format
       opts.formatting.format = function(entry, item)
