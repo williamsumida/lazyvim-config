@@ -1,6 +1,8 @@
 return {
   {
     "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
     keys = {
       {
         "<leader>0",
@@ -39,7 +41,7 @@ return {
         end,
       },
       {
-        "<leader>h",
+        "<leader>ha",
         function()
           require("harpoon.ui").toggle_quick_menu()
         end,

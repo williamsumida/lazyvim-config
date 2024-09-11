@@ -1,7 +1,19 @@
 return {
-  { "/sainnhe/gruvbox-material", enabled = true },
   { "miikanissi/modus-themes.nvim", enabled = true },
+  {
+    "0xstepit/flow.nvim",
+    enabled = true,
+    opts = {
+      transparent = true, -- Set transparent background.
+      fluo_color = "pink", --  Fluo color: pink, yellow, orange, or green.
+      mode = "normal", -- Intensity of the palette: normal, bright, desaturate, or dark. Notice that dark is ugly!
+      aggressive_spell = true, -- Display colors for spell check.
+    },
+  },
   { "nyoom-engineering/oxocarbon.nvim", enabled = true },
+  { "rose-pine/neovim", enabled = true, opts = {
+    variant = "dawn",
+  } },
   {
     "folke/tokyonight.nvim",
     lazy = true,
@@ -31,7 +43,7 @@ return {
       dim_inactive = {
         enabled = true, -- dims the background color of inactive window
         shade = "dark",
-        percentage = 0.15, -- percentage of the shade to apply to the inactive window
+        percentage = 0.8, -- percentage of the shade to apply to the inactive window
       },
       no_italic = false, -- Force no italic
       no_bold = false, -- Force no bold
@@ -70,10 +82,12 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      --colorscheme = "catppuccin",
+      colorscheme = "catppuccin",
+      -- colorscheme = "flow",
+      --colorscheme = "rose-pine-dawn",
       --colorscheme = "gruvbox-material",
       --colorscheme = "modus",
-      colorscheme = "oxocarbon",
+      --colorscheme = "oxocarbon",
     },
   },
 }
