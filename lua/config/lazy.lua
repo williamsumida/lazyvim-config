@@ -16,6 +16,8 @@ require("lazy").setup({
     --{ import = "lazyvim.plugins.extras.ui.mini-animate" },
     --{ import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
+    --python
+    { import = "lazyvim.plugins.extras.lsp.none-ls" },
     -- import/override with your plugins
     { import = "plugins" },
   },

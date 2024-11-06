@@ -54,6 +54,7 @@ return {
       use_libuv_file_watcher = true,
     },
     window = {
+      width = 60,
       mappings = {
         ["<space>"] = "none",
         ["<C-s>"] = "open_split",
