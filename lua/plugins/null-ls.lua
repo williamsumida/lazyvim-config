@@ -1,5 +1,6 @@
 return {
   "nvimtools/none-ls.nvim",
+  disabled = true,
   event = "LazyFile",
   dependencies = { "mason.nvim" },
   init = function()
