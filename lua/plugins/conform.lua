@@ -9,5 +9,11 @@ return {
       -- Use a sub-list to run only the first available formatter
       javascript = { { "prettierd", "prettier" } },
     },
+
+    optional = true,
+    opts = {
+      formatters_by_ft = {
+        go = { "goimports", "gofumpt" },
+      },
   },
 }

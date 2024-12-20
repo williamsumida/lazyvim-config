@@ -18,6 +18,10 @@ return {
       "yaml",
       "astro",
       "php",
+      "go",
+      "gomod",
+      "gowork",
+      "gosum",
     },
   },
 }
