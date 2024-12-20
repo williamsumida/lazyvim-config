@@ -12,11 +12,23 @@ return {
       },
       sections = {
         { section = "terminal", cmd = "fortune | cowsay", hl = "header", padding = 1, indent = 8, height = 15 },
+        { title = "Keys", padding = 1 },
+        { section = "keys", padding = 2 },
         { title = "Sessions", padding = 1 },
         { section = "projects", padding = 1 },
-        { title = "Bookmarks", padding = 1 },
-        { section = "keys" },
       },
+      terminal = {
+        win = { style = "terminal" },
+      },
+    },
+  },
+  keys = {
+    {
+      "<c-/>",
+      function()
+        Snacks.terminal(nil, { win = { position = "float" } })
+      end,
+      desc = "Toggle Terminal",
     },
   },
 }
