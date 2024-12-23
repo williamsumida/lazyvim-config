@@ -1,19 +1,19 @@
 return {
-  { "miikanissi/modus-themes.nvim", enabled = true },
-  {
-    "0xstepit/flow.nvim",
-    enabled = true,
-    opts = {
-      transparent = true, -- Set transparent background.
-      fluo_color = "pink", --  Fluo color: pink, yellow, orange, or green.
-      mode = "normal", -- Intensity of the palette: normal, bright, desaturate, or dark. Notice that dark is ugly!
-      aggressive_spell = true, -- Display colors for spell check.
-    },
-  },
-  { "nyoom-engineering/oxocarbon.nvim", enabled = true },
-  { "rose-pine/neovim", enabled = true, opts = {
-    variant = "dawn",
-  } },
+  --{ "miikanissi/modus-themes.nvim", enabled = true },
+  --{
+  --  "0xstepit/flow.nvim",
+  --  enabled = true,
+  --  opts = {
+  --    transparent = true, -- Set transparent background.
+  --    fluo_color = "pink", --  Fluo color: pink, yellow, orange, or green.
+  --    mode = "normal", -- Intensity of the palette: normal, bright, desaturate, or dark. Notice that dark is ugly!
+  --    aggressive_spell = true, -- Display colors for spell check.
+  --  },
+  --},
+  --{ "nyoom-engineering/oxocarbon.nvim", enabled = true },
+  --{ "rose-pine/neovim", enabled = true, opts = {
+  --  variant = "dawn",
+  --} },
   {
     "folke/tokyonight.nvim",
     lazy = true,
@@ -35,15 +35,15 @@ return {
       flavour = "mocha", -- latte, frappe, macchiato, mocha
       background = { -- :h background
         light = "latte",
-        dark = "mocha",
+        dark = "macchiato",
       },
       transparent_background = false, -- disables setting the background color.
       show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
       term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
       dim_inactive = {
-        enabled = true, -- dims the background color of inactive window
+        enabled = false, -- dims the background color of inactive window
         shade = "dark",
-        percentage = 0.8, -- percentage of the shade to apply to the inactive window
+        percentage = 0, -- percentage of the shade to apply to the inactive window
       },
       no_italic = false, -- Force no italic
       no_bold = false, -- Force no bold
@@ -82,6 +82,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
+      -- colorscheme = "tokyonight",
       colorscheme = "catppuccin",
       -- colorscheme = "flow",
       --colorscheme = "rose-pine-dawn",
