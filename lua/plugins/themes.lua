@@ -11,20 +11,64 @@ return {
   --  },
   --},
   --{ "nyoom-engineering/oxocarbon.nvim", enabled = true },
-  --{ "rose-pine/neovim", enabled = true, opts = {
-  --  variant = "dawn",
-  --} },
+  {
+    "rose-pine/neovim",
+    enabled = true,
+    config = function()
+      require("rose-pine").setup({
+        variant = "moon", -- auto, main, moon, or dawn
+        dim_inactive_windows = true,
+        extend_background_behind_borders = true,
+
+        enable = {
+          terminal = true,
+          legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
+          migrations = true, -- Handle deprecated options automatically
+        },
+
+        styles = {
+          bold = true,
+          italic = true,
+          transparency = true,
+        },
+      })
+    end,
+  },
+  {
+    "morhetz/gruvbox",
+  },
+  {
+    "sainnhe/gruvbox-material",
+    lazy = true,
+    config = function()
+      vim.g.gruvbox_material_foreground = "soft"
+      vim.g.gruvbox_material_background = "soft"
+      vim.g.gruvbox_material_ui_contrast = "high" -- The contrast of line numbers, indent lines, etc.
+      vim.g.gruvbox_material_float_style = "dim"
+      vim.g.background = "light"
+    end,
+  },
   {
     "folke/tokyonight.nvim",
-    lazy = true,
+    lazy = false,
+    priority = 1000,
     opts = {
       style = "moon",
-      transparent = true,
+      transparent = false,
       dim_inactive = true, -- dims inactive windows
       --styles = {
       --  sidebars = "transparent",
       --  floats = "transparent",
       --},
+    },
+  },
+  {
+    "ficcdaf/ashen.nvim",
+    lazy = false,
+    priority = 1000,
+    -- configuration is optional!
+    opts = {
+      -- your settings here
     },
   },
   {
@@ -82,10 +126,11 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      -- colorscheme = "tokyonight",
-      colorscheme = "catppuccin",
+      --colorscheme = "tokyonight",
+      --colorscheme = "ashen",
+      --colorscheme = "catppuccin",
       -- colorscheme = "flow",
-      --colorscheme = "rose-pine-dawn",
+      colorscheme = "rose-pine",
       --colorscheme = "gruvbox-material",
       --colorscheme = "modus",
       --colorscheme = "oxocarbon",
