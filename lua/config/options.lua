@@ -10,3 +10,5 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 vim.g.snacks_animate = false
 vim.o.tabstop = 4
+vim.o.list = false
+vim.o.listchars = "tab:> ,trail:-,nbsp:+,eol:↵"

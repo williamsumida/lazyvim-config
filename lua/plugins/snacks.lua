@@ -3,6 +3,7 @@ return {
   opts = {
     scroll = { enabled = false },
     animate = { enabled = false },
+    indent = { enabled = false },
     dashboard = {
       --example = "chafa",
       formats = {

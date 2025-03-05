@@ -84,10 +84,18 @@ return {
     end,
     opts = function(_, opts)
       local format_kinds = opts.formatting.format
+      local cmp = require("cmp")
+
       opts.formatting.format = function(entry, item)
         format_kinds(entry, item)
         return require("tailwindcss-colorizer-cmp").formatter(entry, item)
       end
+      opts.mapping = cmp.mapping.preset.insert({
+        ["C-n"] = cmp.mapping.select_next_item(),
+        ["C-p"] = cmp.mapping.select_prev_item(),
+        ["C-f"] = cmp.mapping.scroll_docs(1),
+        ["C-b"] = cmp.mapping.scroll_docs(-1),
+      })
     end,
   },
 }

@@ -15,6 +15,12 @@ return {
           require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
         end,
       },
+      {
+        "<leader>ct",
+        function()
+          require("telescope.builtin").colorscheme()
+        end,
+      },
     },
     -- change some options
     opts = {

@@ -3,47 +3,52 @@ return {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("harpoon"):setup()
+    end,
     keys = {
       {
         "<leader>0",
         function()
-          require("harpoon.mark").add_file()
+          require("harpoon"):list():append()
         end,
+        desc = "harpoon file",
       },
       {
         "<leader>1",
         function()
-          require("harpoon.ui").nav_file(1)
+          require("harpoon"):list():select(1)
         end,
       },
       {
         "<leader>2",
         function()
-          require("harpoon.ui").nav_file(2)
+          require("harpoon"):list():select(2)
         end,
       },
       {
         "<leader>3",
         function()
-          require("harpoon.ui").nav_file(3)
+          require("harpoon"):list():select(3)
         end,
       },
       {
         "<leader>4",
         function()
-          require("harpoon.ui").nav_file(4)
+          require("harpoon"):list():select(4)
         end,
       },
       {
         "<leader>5",
         function()
-          require("harpoon.ui").nav_file(5)
+          require("harpoon"):list():select(5)
         end,
       },
       {
         "<leader>ha",
         function()
-          require("harpoon.ui").toggle_quick_menu()
+          local harpoon = require("harpoon")
+          harpoon.ui:toggle_quick_menu(harpoon:list())
         end,
       },
     },

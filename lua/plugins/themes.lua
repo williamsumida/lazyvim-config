@@ -11,12 +11,41 @@ return {
   --  },
   --},
   --{ "nyoom-engineering/oxocarbon.nvim", enabled = true },
+  { "williamsumida/pastelaria" },
+  { "miikanissi/modus-themes.nvim", priority = 1000 },
+  { "nyngwang/nvimgelion" },
+  { "kdheepak/monochrome.nvim" },
+  {
+    "xero/miasma.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  { "chrsm/paramount-ng.nvim", requires = { "rktjmp/lush.nvim" } },
+  {
+    "jackplus-xyz/binary.nvim",
+    opts = {
+      style = "system",
+      colors = {
+        fg = "#000000",
+        -- bg = "#FFB400",
+        --bg = "#9d00ff",
+        -- bg = "#AC94F4",
+        bg = "#FFB400",
+      },
+      -- Customize the reversed groups
+      reversed_group = {
+        Title = true, -- Add a new reversed group
+        Search = false, -- Disable a default reversed group
+        CursorLine = true,
+      },
+    },
+  },
   {
     "rose-pine/neovim",
     enabled = true,
     config = function()
       require("rose-pine").setup({
-        variant = "moon", -- auto, main, moon, or dawn
+        variant = "dawn", -- auto, main, moon, or dawn
         dim_inactive_windows = true,
         extend_background_behind_borders = true,
 
@@ -29,7 +58,7 @@ return {
         styles = {
           bold = true,
           italic = true,
-          transparency = true,
+          transparency = false,
         },
       })
     end,
@@ -41,11 +70,11 @@ return {
     "sainnhe/gruvbox-material",
     lazy = true,
     config = function()
-      vim.g.gruvbox_material_foreground = "soft"
-      vim.g.gruvbox_material_background = "soft"
+      vim.g.gruvbox_material_foreground = "medium"
+      vim.g.gruvbox_material_background = "medium"
       vim.g.gruvbox_material_ui_contrast = "high" -- The contrast of line numbers, indent lines, etc.
       vim.g.gruvbox_material_float_style = "dim"
-      vim.g.background = "light"
+      vim.g.background = "medium"
     end,
   },
   {
@@ -85,9 +114,9 @@ return {
       show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
       term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
       dim_inactive = {
-        enabled = false, -- dims the background color of inactive window
-        shade = "dark",
-        percentage = 0, -- percentage of the shade to apply to the inactive window
+        enabled = true, -- dims the background color of inactive window
+        shade = "light",
+        percentage = 0.1, -- percentage of the shade to apply to the inactive window
       },
       no_italic = false, -- Force no italic
       no_bold = false, -- Force no bold
@@ -107,7 +136,13 @@ return {
         operators = {},
         -- miscs = {}, -- Uncomment to turn off hard-coded styles
       },
-      color_overrides = {},
+      color_overrides = {
+        all = {
+          base = "#000000",
+          mantle = "#000000",
+          crust = "#000000",
+        },
+      },
       custom_highlights = {},
       integrations = {
         cmp = true,
@@ -126,14 +161,18 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      --colorscheme = "tokyonight",
+      -- colorscheme = "tokyonight",
       --colorscheme = "ashen",
-      --colorscheme = "catppuccin",
+      colorscheme = "catppuccin",
       -- colorscheme = "flow",
-      colorscheme = "rose-pine",
+      -- colorscheme = "rose-pine",
+      -- colorscheme = "binary",
+      -- colorscheme = "monochrome",
+      -- colorscheme = "paramount-ng",
       --colorscheme = "gruvbox-material",
       --colorscheme = "modus",
       --colorscheme = "oxocarbon",
+      -- colorscheme = "pastelaria",
     },
   },
 }
