@@ -67,6 +67,16 @@ return {
     "morhetz/gruvbox",
   },
   {
+    "EdenEast/nightfox.nvim",
+    options = {
+      styles = {
+        comments = "italic",
+        keywords = "bold",
+        types = "italic,bold",
+      },
+    },
+  },
+  {
     "sainnhe/gruvbox-material",
     lazy = true,
     config = function()
@@ -74,7 +84,7 @@ return {
       vim.g.gruvbox_material_background = "medium"
       vim.g.gruvbox_material_ui_contrast = "high" -- The contrast of line numbers, indent lines, etc.
       vim.g.gruvbox_material_float_style = "dim"
-      vim.g.background = "medium"
+      vim.o.background = "light"
     end,
   },
   {
@@ -116,7 +126,7 @@ return {
       dim_inactive = {
         enabled = true, -- dims the background color of inactive window
         shade = "light",
-        percentage = 0.1, -- percentage of the shade to apply to the inactive window
+        percentage = 0.4, -- percentage of the shade to apply to the inactive window
       },
       no_italic = false, -- Force no italic
       no_bold = false, -- Force no bold
@@ -169,7 +179,9 @@ return {
       -- colorscheme = "binary",
       -- colorscheme = "monochrome",
       -- colorscheme = "paramount-ng",
-      --colorscheme = "gruvbox-material",
+      -- colorscheme = "gruvbox-material",
+      -- colorscheme = "dawnfox",
+      -- colorscheme = "nightfox",
       --colorscheme = "modus",
       --colorscheme = "oxocarbon",
       -- colorscheme = "pastelaria",
