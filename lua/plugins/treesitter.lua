@@ -23,6 +23,7 @@ return {
       "gowork",
       "gosum",
       "clojure",
+      "fennel",
     },
   },
 }

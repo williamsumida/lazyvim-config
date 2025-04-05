@@ -49,3 +49,4 @@ require("lazy").setup({
     },
   },
 })
+vim.g.maplocalleader = ";"

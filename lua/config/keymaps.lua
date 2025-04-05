@@ -2,6 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 local keymap = vim.keymap
+vim.g.maplocalleader = ";"
 vim.g.mapleader = " "
 
 keymap.set("n", "x", '"_x')
