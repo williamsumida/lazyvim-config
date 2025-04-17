@@ -111,6 +111,15 @@ return {
     },
   },
   {
+    "vague2k/vague.nvim",
+    config = function()
+      -- NOTE: you do not need to call setup if you don't want to.
+      require("vague").setup({
+        -- optional configuration here
+      })
+    end,
+  },
+  {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
@@ -173,7 +182,7 @@ return {
     opts = {
       -- colorscheme = "tokyonight",
       --colorscheme = "ashen",
-      colorscheme = "catppuccin",
+      -- colorscheme = "catppuccin",
       -- colorscheme = "flow",
       -- colorscheme = "rose-pine",
       -- colorscheme = "binary",
@@ -181,6 +190,7 @@ return {
       -- colorscheme = "paramount-ng",
       -- colorscheme = "gruvbox-material",
       -- colorscheme = "dawnfox",
+      colorscheme = "vague",
       -- colorscheme = "nightfox",
       --colorscheme = "modus",
       --colorscheme = "oxocarbon",
